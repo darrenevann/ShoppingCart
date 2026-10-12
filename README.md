@@ -1,73 +1,59 @@
-Shopping Cart App 🛒
+# 🛒 Shopping Cart Flutter App
 
-Sebuah aplikasi e-commerce sederhana yang dibangun menggunakan Flutter. Project ini mendemonstrasikan antarmuka dan fungsionalitas dasar dari fitur keranjang belanja (shopping cart), menampilkan katalog produk beserta aset visualnya.
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 
-🚀 Fitur Utama
+Aplikasi e-commerce sederhana berbasis Flutter yang mendemonstrasikan fungsionalitas antarmuka keranjang belanja. Proyek ini memuat katalog produk dasar dan mengimplementasikan manajemen antarmuka pengguna yang terstruktur.
 
-Menampilkan daftar produk beserta gambar (Headphone, Laptop, Mouse).
+## ✨ Fitur Utama
 
-Menambahkan produk ke dalam keranjang belanja.
+* **Katalog Produk:** Menampilkan daftar produk dengan aset visual statis (laptop, headphone, mouse).
+* **Keranjang Belanja:** Simulasi penambahan, pengurangan, dan kalkulasi item di dalam keranjang.
+* **UI Responsif:** Antarmuka yang beradaptasi dengan dimensi layar perangkat.
 
-Manajemen state untuk menghitung total belanjaan (jika diimplementasikan di main.dart).
+## 🚀 Memulai Proyek
 
-Antarmuka pengguna yang responsif.
+### Prasyarat
 
-(Catatan: Silakan sesuaikan atau tambahkan fitur di atas sesuai dengan logika aplikasi yang sebenarnya).
+Pastikan lingkungan pengembangan Anda telah terpasang dan dikonfigurasi dengan benar:
+* [Flutter SDK](https://flutter.dev/docs/get-started/install)
+* [Dart SDK](https://dart.dev/get-dart)
+* Editor teks atau IDE (Android Studio / VS Code)
 
-🛠️ Teknologi yang Digunakan
+### Instalasi dan Eksekusi
 
-Framework: Flutter
+1. Buka terminal dan arahkan ke direktori root proyek.
+   ```bash
+   cd shoppingcart
+   ```
+2. Unduh semua dependensi yang dideklarasikan.
+   ```bash
+   flutter pub get
+   ```
+3. Jalankan aplikasi pada emulator atau perangkat keras yang terhubung.
+   ```bash
+   flutter run
+   ```
 
-Bahasa Pemrograman: Dart
+## 📁 Struktur Direktori
 
-📂 Struktur Direktori Utama
+```text
+shoppingcart/
+├── android/           # Konfigurasi spesifik kompilasi native Android
+├── asset/
+│   └── images/        # Penyimpanan aset gambar (laptop.png, headphone.png, mouse.jpg)
+├── lib/
+│   └── main.dart      # Titik masuk utama (entry point) aplikasi
+├── test/              # Direktori pengujian kode (widget test)
+└── pubspec.yaml       # Berkas konfigurasi utama untuk dependensi dan aset
+```
 
-lib/main.dart : Titik masuk (entry point) utama dari aplikasi beserta logika shopping cart.
+## 🖼️ Manajemen Aset
 
-asset/images/ : Direktori yang berisi aset gambar lokal yang digunakan dalam aplikasi:
+Setiap penambahan gambar atau aset statis baru harus dideklarasikan di dalam file `pubspec.yaml` agar sistem Flutter dapat merendernya. Konfigurasi saat ini menggunakan blok berikut:
 
-headphone.png
-
-laptop.png
-
-mouse.jpg
-
-pubspec.yaml : File konfigurasi dependensi dan manajemen aset aplikasi.
-
-💻 Memulai (Getting Started)
-
-Ikuti langkah-langkah berikut untuk menjalankan project ini di komputer lokal Anda:
-
-Persiapan: Pastikan Anda sudah menginstal Flutter SDK di sistem Anda.
-
-Buka Terminal dan arahkan ke dalam direktori project ini:
-
-cd ShoppingCart
-
-
-Unduh Dependensi: Ambil semua package yang dibutuhkan oleh aplikasi dengan menjalankan:
-
-flutter pub get
-
-
-Jalankan Aplikasi: Mulai jalankan aplikasi di emulator, simulator iOS, atau perangkat fisik Android/iOS yang terhubung:
-
-flutter run
-
-
-🧪 Pengujian (Testing)
-
-Project ini dilengkapi dengan kerangka pengujian dasar. Anda bisa menjalankan widget test yang ada di dalam folder test/ (misal: widget_test.dart) dengan perintah:
-
-flutter test
-
-
-📚 Referensi Tambahan
-
-Jika ini adalah project Flutter pertama Anda, beberapa sumber berikut mungkin membantu:
-
-Lab: Tulis aplikasi Flutter pertama Anda
-
-Cookbook: Kumpulan resep/solusi untuk Flutter
-
-Untuk dokumentasi lengkap tentang pengembangan Flutter, kunjungi dokumentasi resminya.
+```yaml
+flutter:
+  assets:
+    - asset/images/
+```
